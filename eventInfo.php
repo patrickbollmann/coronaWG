@@ -3,7 +3,7 @@ include "db.php";
 $sql = "SELECT * FROM Event WHERE ID ='".$_GET['id']."'";
 $eventresult = $mysqli->query($sql);
 $event=$eventresult->fetch_assoc();
-$sql = "SELECT * FROM User WHERE Event ='".$_GET['id']."'";
+$sql = "SELECT * FROM User WHERE Event ='".$_GET['id']."' ORDER BY Vorname, Nachname";
 $userresult = $mysqli->query($sql);
 ?>
 
@@ -34,6 +34,7 @@ $userresult = $mysqli->query($sql);
                     <td><b>Adresse</b></td>
                     <td><b>Email</b></td>
                     <td><b>Telefonnummer</b></td>
+                    <td><b>Testnachweis</b></td>
                 </tr>
             </thead>
             <tbody>
@@ -46,6 +47,7 @@ $userresult = $mysqli->query($sql);
                         <td><?php echo $user["Straße"]." ".$user["Hausnummer"]. ", ".$user["Postleitzahl"]." ".$user["Ort"] ?></td>
                         <td><?php echo $user["Email"] ?></td>
                         <td><?php echo $user["Telefon"] ?></td>
+                        <td><a href="https://mobilofix.de/coronawg/<?php echo $user['File']?>" class = 'btn btn-info'>Testnachweis</a></td>
                     </tr>
                 <?php endwhile; ?>
 

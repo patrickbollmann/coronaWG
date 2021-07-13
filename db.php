@@ -1,7 +1,7 @@
 <?php
-include "/var/www/patrickbollmann.de/html/secret/secret.php";
+include "/var/www/patrick/mobilofix.de/secret/secret.php";
 
-$mysqli = new mysqli("localhost", $dbuser, $dbpass, "CoronaWG");
+$mysqli = new mysqli($dbhost, $dbuser, $dbpass, "corona_wg");
 $mysqli->set_charset("utf8");
 
 if ($mysqli->connect_errno) {

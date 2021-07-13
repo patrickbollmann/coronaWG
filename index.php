@@ -41,7 +41,7 @@ $eventresult = $mysqli->query($sql);
                     <tr>
                         <td><?php echo $events["Titel"] ?></td>
                         <td><?php echo $events["Datum"] ?></td>
-                        <td><a href="https://patrickbollmann.de/coronawg/login.php?key=<?php echo $events["token"] ?>">https://patrickbollmann.de/coronawg/login.php?key=<?php echo $events["token"] ?></a></td>
+                        <td><a href="https://mobilofix.de/coronawg/login.php?key=<?php echo $events["token"] ?>">https://mobilofix.de/coronawg/login.php?key=<?php echo $events["token"] ?></a></td>
                         <td><a href=<?php echo "eventInfo.php?id=" . $events['ID']  ?> class="btn btn-info">Details</a> </td>
                         <td><a href=<?php echo "editEvent.php?id=" . $events['ID']  ?> class="btn btn-warning">Bearbeiten</a> </td>
                     </tr>

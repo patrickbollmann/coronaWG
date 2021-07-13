@@ -34,6 +34,9 @@ $event = $eventresult->fetch_assoc();
                 <div class="col-md-6 col-12 mb-3">
                     <label>Beschreibung:</label> <input class="form-control" name="beschreibung" type="text" value="<?php echo $event['Beschreibung']; ?>">
                 </div>
+                <div class="col-md-6 col-12 mb-3">
+                    <label>Link zur online Zahlung (optional):</label> <input class="form-control" name="payment" type="text" value="<?php echo $event['Payment']; ?>">
+                </div>
             </div>
             <br>
             <input class="form-control" name="id" type="hidden" value="<?php echo $event['ID']; ?>">
